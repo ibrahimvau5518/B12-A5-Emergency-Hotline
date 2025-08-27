@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -13,24 +14,34 @@ body {
 /* nav style start here  */
 
 .nav-section {
-  border: 2px solid red;
+  display: flex;
   background-color: white;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding: 24px 100px;
+  background-color: white;
+  height: 30px;
 }
 .left-side {
   display: flex;
-  gap: 10px;
+  align-items: center;
 }
+
 .nav-logo {
+  height: 120%;
 }
 .nav-tittle {
-  font-weight: 800;
-  font-size: 50px;
+  /* font-weight: 800;
+  font-size: 50px; */
   color: #006747
 }
 
 .right-side{
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
+  gap: 10px;
+}
+
+.right-side img{
+  height: 20px;
 }
