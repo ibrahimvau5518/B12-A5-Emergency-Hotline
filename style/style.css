@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
 
 body {
   background-color: white;
-  font-family: "Hind Madurai", sans-serif;
+  font-family: 'Hind Madurai', sans-serif;
 }
 
 /* nav style start here  */
@@ -17,7 +16,7 @@ body {
   display: flex;
   background-color: white;
   justify-content: space-between;
-  padding: 24px 100px;
+  padding: 24px 50px;
   background-color: white;
   height: 30px;
 }
@@ -32,16 +31,37 @@ body {
 .nav-tittle {
   /* font-weight: 800;
   font-size: 50px; */
-  color: #006747
+  color: #006747;
 }
 
-.right-side{
+.right-side {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
-.right-side img{
+.right-side img {
   height: 20px;
+}
+
+/* hero section style start here  */
+
+.hero {
+  background: linear-gradient(to right, #013223, #006747, #013223);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 35px;
+  height: 60px;
+}
+.hero img {
+  max-height: 70%;
+}
+.hero p {
+font-size: 10px;
+font-weight: 600;
 }
