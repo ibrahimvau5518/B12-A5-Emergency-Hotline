@@ -65,3 +65,59 @@ body {
 font-size: 10px;
 font-weight: 600;
 }
+
+/* main section style start here  */
+
+.main{
+display: flex;
+justify-content: space-between;
+padding: 30px 100px;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card{
+  height: 220px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px gray;
+}
+.card1{
+  display: flex;
+  justify-content: space-between;
+}
+.card2{
+  line-height: 1.8;
+}
+.card2 button{
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+.icon1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe3e2;
+  height: 30px;
+  /* width: 30px; */
+  padding: 5px;
+  border-radius: 5px;
+}
+.icon1 img{
+  height: 70%;
+}
+
+
+
+
+
+
+.call-history{
+border: 2px solid blue
+}
