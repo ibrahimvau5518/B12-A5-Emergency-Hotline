@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind css cdn  -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="font-primary">
@@ -29,7 +31,7 @@
             background-color: rgba(65, 255, 107, 0.2);
             border-radius: 25px;
             padding: 5px 10px;">
-        <span id="totalHeartCount">0</span><img src="./assets/heart.png" alt="">
+        <span id="heartCountDisply">0</span><img src="./assets/heart.png" alt="">
       </div>
       <div class="div2" style="
             text-align: center;
@@ -39,16 +41,14 @@
             background-color: rgba(65, 255, 107, 0.2);
             border-radius: 25px;
             padding: 5px 10px;">
-        <span>100</span><img src="./assets/coin.png" alt="">
+        <div id="coinDisplay">100</div>
+        <img src="./assets/coin.png" alt="">
 
       </div>
-      <div class="div3">
-        <p style="
-        color: white;
-        background-color: #00a63e;
-        border-radius: 25px;
-        padding: 5px 15px;">copy</p>
-      </div>
+      <button class="navCopyBtn bg-green-600 px-2  rounded-full text-white flex items-center gap-1">
+        <span id="copyCounterDisply">0</span>
+        <span>Copy</span>
+      </button>
     </div>
   </header>
 
@@ -56,7 +56,7 @@
 
   <section class="hero">
     <img src="./assets/logo-dark.png" alt="">
-    <h2>Emergency Service Directory</h2>
+    <h2 class="font-bold">Emergency Service Directory</h2>
     <p>
       Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
     </p>
@@ -65,7 +65,7 @@
   <!-- main section start here  -->
 
   <section class="main">
-    <div class="card-container">
+    <div id="card-container" >
 
       <!-- card 1 start here  -->
       <div class="card">
@@ -76,13 +76,18 @@
           <i class="fa-regular fa-heart"></i>
         </div>
         <div class="card2">
-          <h3>National Emergency Number</h3>
+          <h3 id="cardTitle">National Emergency Number</h3>
           <p style="font-size: 12; color: darkgrey;">National Emergency</p>
-          <h2>999</h2>
-          <button style="padding: 5px 8px;">All</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
-            Call</button>
+          <h2 id="contactNumber">999</h2>
+          <button id="contactCategory" style="padding: 5px 8px;">All</button><br>
+          <div class="card-lower">
+            <button
+              class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+                class="fa-regular fa-copy"></i> Copy</button>
+            <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i
+                class="fa-solid fa-phone"></i>
+              Call</button>
+          </div>
         </div>
       </div>
 
@@ -99,9 +104,13 @@
           <p style="font-size: 12; color: darkgrey;">Police</p>
           <h2>999</h2>
           <button style="padding: 5px 8px;">Police</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
-            Call</button>
+          <div class="card-lower">
+            <button
+              class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+                class="fa-regular fa-copy"></i> Copy</button>
+            <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+              Call</button>
+          </div>
         </div>
       </div>
 
@@ -118,9 +127,13 @@
           <p style="font-size: 12; color: darkgrey;">Fire Service</p>
           <h2>999</h2>
           <button style="padding: 5px 8px;">Fire</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
 
@@ -137,9 +150,13 @@
           <p style="font-size: 12; color: darkgrey;">Ambulance</p>
           <h2>1994-999999</h2>
           <button style="padding: 5px 8px;">Health</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
 
@@ -156,9 +173,13 @@
           <p style="font-size: 12; color: darkgrey;">Women & Child Helpline</p>
           <h2>109</h2>
           <button style="padding: 5px 8px;">Help</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
 
@@ -175,9 +196,13 @@
           <p style="font-size: 12; color: darkgrey;">Anti-Corruption</p>
           <h2>106</h2>
           <button style="padding: 5px 8px;">Govt.</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
 
@@ -194,9 +219,13 @@
           <p style="font-size: 12; color: darkgrey;">Electricity Outage</p>
           <h2>16216</h2>
           <button style="padding: 5px 8px;">Electricity</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
 
@@ -213,9 +242,13 @@
           <p style="font-size: 12; color: darkgrey;">Brac</p>
           <h2>16445</h2>
           <button style="padding: 5px 8px;">NGO</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
 
@@ -233,18 +266,40 @@
           <p style="font-size: 12; color: darkgrey;">Bangladesh Railway</p>
           <h2>163</h2>
           <button style="padding: 5px 8px;">Travel</button><br>
-          <button style="width: 48%;"><i class="fa-regular fa-copy"></i> Copy</button>
-          <button style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
+          <div class="card-lower">
+          <button
+            class="copyBtn hover:bg-gray-200 duration-300 cursor-pointer px-5 border border-gray-300 rounded-md text-gray-400"><i
+              class="fa-regular fa-copy"></i> Copy</button>
+          <button class="callButton" style="background-color: #00a63e; color: white; width: 48%"><i class="fa-solid fa-phone"></i>
             Call</button>
+          </div>
         </div>
       </div>
-
     </div>
 
-  
+    <!-- history section start here  -->
+
+    <div class="history-container">
+      <div class="call-history">
+        <h3><i class="fa-solid fa-clock"></i>Call History</h3>
+        <button id="clear-btn" style="
+              color: white;
+              background-color: #00a63e;
+              padding: 5px 10px;
+              border: none;
+              border-radius: 25px;
+            ">
+          Clear
+        </button>
+      </div>
+      <div id="historyDetails">
+        <!-- Added Card here in Dynamic -->
+      </div>
+    </div>
+
   </section>
 
-  <script src="./js/script.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>

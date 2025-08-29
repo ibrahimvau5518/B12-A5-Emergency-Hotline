@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -23,10 +24,11 @@ body {
 .left-side {
   display: flex;
   align-items: center;
+  gap: 2px;
 }
 
 .nav-logo {
-  height: 120%;
+  height: 30px;
 }
 .nav-tittle {
   /* font-weight: 800;
@@ -39,6 +41,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+.navCopyBtn{
+  padding: 5px 8px;
 }
 
 .right-side img {
@@ -56,56 +61,65 @@ body {
   align-items: center;
   text-align: center;
   padding: 40px 35px;
-  height: 60px;
+  height: 150px;
 }
 .hero img {
-  max-height: 70%;
+  max-height: 80%;
 }
 .hero p {
-font-size: 10px;
-font-weight: 600;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 /* main section style start here  */
 
-.main{
-display: flex;
-justify-content: space-between;
-padding: 30px 100px;
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+  gap: 10px;
+  margin: 0 auto;
+  width: auto;
+  background-color: #F5FFF6;
 }
 
-.card-container{
+#card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin: 0;
 }
-.card{
+.card {
   height: 220px;
-  width: 300px;
+  max-width: 420px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px gray;
+  background-color:white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15)
 }
-.card1{
+.card1 {
   display: flex;
   justify-content: space-between;
 }
-.card2{
+.card2 h3{
+  font-size: 1em;
+}
+.card2 {
   line-height: 1.8;
 }
-.card2 button{
+.card2 button {
   padding: 5px 5px;
   border-radius: 5px;
   border: none;
   margin-top: 5px;
 }
-.icon1{
+.icon1 {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffe3e2;
   height: 30px;
-  /* width: 30px; */
+  width: 30px;
   padding: 5px;
   border-radius: 5px;
 }
@@ -113,11 +127,37 @@ padding: 30px 100px;
   height: 70%;
 }
 
+/* call-history section style start here  */
+.history-container{
+ /* width: 400px; */
+ max-height: 1140px;
+ padding: 10px;
+ border-radius: 10px;
+  background-color:white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15)
+  
+}
 
 
 
+.call-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15)
+  border-radius: 10px;
+  padding: 15px;
+  gap: 100px;
+}
+#clear-btn{
+  /* font-size: 18px; */
+  height: 52px;
+  width: 114px;
+  padding: 12px 36px;
+}
 
-
-.call-history{
-border: 2px solid blue
+#historyDetails{
+  background-color: white;
+padding: 10px 10px;
 }
