@@ -161,3 +161,45 @@ body {
   background-color: white;
 padding: 10px 10px;
 }
+
+
+
+/* responsive for mobile  */
+@media (max-width: 576px){
+.main{
+  display: flex;
+  flex-direction: column;
+ padding: 10px 20px;
+}
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 10px auto;
+}
+.card {
+padding: 10px;
+margin: 0 5px;
+width: 410px;
+}
+.card-lower{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.history-container{
+  margin: 0 auto;
+  width: 420px;
+}
+
+.hero{
+  width: 0 auto;
+  height: 200px;
+}
+.hero img {
+  max-height: 40%;
+}
+.hero p {
+  font-size: 15px;
+  font-weight: 400;
+}
+}
